@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import "./Header.scss";
 
-export default function Header() {
+function Header() {
   return (
     <header>
       <motion.div
@@ -28,3 +28,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
