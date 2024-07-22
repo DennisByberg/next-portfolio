@@ -1,8 +1,66 @@
+@import "../../sass/colors";
+
 header {
   position: relative;
   z-index: 999;
 
-  > div {
+  nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    height: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transform: translateX(-50%);
+
+    @media (min-width: 640px) {
+      height: initial;
+      padding-bottom: 0;
+    }
+
+    ul {
+      display: flex;
+      width: 22rem;
+      flex-wrap: wrap;
+      justify-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: medium;
+      gap: 0.25rem 0;
+
+      @media (min-width: 640px) {
+        width: initial;
+        flex-wrap: nowrap;
+        gap: 1.25rem;
+      }
+      li {
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .link {
+          color: $gray-500;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          transition: 150ms;
+
+          &:hover {
+            color: $gray-950;
+          }
+        }
+      }
+    }
+  }
+
+  .header__background {
     position: fixed;
     top: 0;
     left: 50%;
@@ -13,13 +71,12 @@ header {
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.03);
     backdrop-filter: blur(0.5rem);
     border-radius: 0;
-    transform: translateX(-50%);
 
     @media (min-width: 640px) {
       top: 1.5rem;
       height: 3.25rem;
       width: 36rem;
-      border-radius: 9999px;
+      border-radius: 99px;
     }
   }
 }
