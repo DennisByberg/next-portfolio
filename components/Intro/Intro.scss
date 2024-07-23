@@ -1,3 +1,5 @@
+@import "../../sass/colors";
+
 .intro {
   margin-bottom: 7rem;
   max-width: 50rem;
@@ -33,17 +35,78 @@
   }
 
   &__text {
-    margin-bottom: 2.5rem; // mb-10
-    margin-top: 1rem; // mt-4
-    padding-left: 1rem; // px-4
-    padding-right: 1rem; // px-4
-    font-size: 1.5rem; // text-2xl, assuming 1xl = 1.25rem and scaling up
-    font-weight: 500; // font-medium
-    line-height: 1.5 !important; // !leading-[1.5]
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5 !important;
 
     @media (min-width: 640px) {
-      // sm: breakpoint
-      font-size: 2.25rem; // sm:text-4xl, assuming 4xl = 2.25rem and scaling up
+      font-size: 2.25rem;
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+  }
+
+  &__contact-button {
+    background-color: $gray-700;
+    font-weight: 600;
+    border-radius: 99px;
+
+    &:hover {
+      background-color: $gray-950;
+    }
+
+    &:active {
+      transform: translateY(3px);
+      transition: 100ms;
+    }
+  }
+
+  &__download-cv-button {
+    background-color: $gray-50;
+    color: $gray-950;
+    font-weight: 600;
+    border-radius: 99px;
+
+    &:hover {
+      background-color: rgb(234, 255, 234);
+    }
+
+    &:active {
+      transform: translateY(3px);
+      transition: 100ms;
+    }
+  }
+
+  &__github-icon {
+    color: rgb(14, 17, 24);
+
+    &:active {
+      transform: translateY(3px);
+      transition: 100ms;
+    }
+  }
+
+  &__linked-in-icon {
+    color: rgb(18, 107, 196);
+
+    &:active {
+      transform: translateY(3px);
+      transition: 100ms;
     }
   }
 }
