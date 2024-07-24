@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import { ActiveSectionContextProvider } from "@/context/ActiveSectionContextProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
@@ -20,8 +21,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="redBlur"></div>
         <div className="blueBlur"> </div>
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

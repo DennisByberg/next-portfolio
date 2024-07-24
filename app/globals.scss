@@ -4,6 +4,10 @@
 
 @import "../sass/colors";
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: $gray-50;
   color: $gray-950;

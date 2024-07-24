@@ -1,11 +1,14 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import "./Header.scss";
 
 function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
     <header>
       <motion.div
@@ -16,8 +19,19 @@ function Header() {
         <nav>
           <ul>
             {links.map((link) => (
-              <motion.li key={link.hash} initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
-                <Link className="link transition" href={link.hash}>
+              <motion.li
+                key={link.hash}
+                initial={{ y: -30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+              >
+                <Link
+                  className={activeSection === link.name ? "link-active" : "link"}
+                  href={link.hash}
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
                   {link.name}
                 </Link>
               </motion.li>
