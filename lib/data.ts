@@ -44,3 +44,25 @@ export const projectsData = [
     imageUrl: ecoHeroPNG,
   },
 ] as const;
+
+export const SKILLSDATA = [
+  "Agila Metoder",
+  "Cypress",
+  "Express",
+  "Firebase",
+  "Git",
+  "Github",
+  "HTML",
+  "JavaScript",
+  "Jest",
+  "TypeScript",
+  "MongoDB",
+  "Node",
+  "React",
+  "React Testing Library",
+  "Redux",
+  "UI / UX",
+  "SASS / CSS",
+  "C#",
+  "SQL",
+] as const;

@@ -1,0 +1,27 @@
+@import "../../sass/colors";
+
+.skills {
+  margin-bottom: 3rem;
+  max-width: 53rem;
+  scroll-margin-top: 3rem;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    margin-bottom: 10rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    color: $gray-800;
+
+    &__item {
+      background-color: $white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 13px;
+      padding: 0.75rem 1.25rem;
+    }
+  }
+}
