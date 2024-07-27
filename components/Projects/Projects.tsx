@@ -1,25 +1,15 @@
 "use client";
 
-import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
 import { projectsData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import Project from "../Project/Project";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import "./projects.scss";
 
 function Projects() {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Projects");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("About", 0.5);
 
   return (
     <motion.section

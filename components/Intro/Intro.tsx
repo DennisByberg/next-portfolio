@@ -1,6 +1,6 @@
 "use client";
 
-import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
+import { useSectionInView } from "@/lib/hooks";
 import DennisPNG from "@/public/dennis2.png";
 import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -9,21 +9,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Button, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import "./Intro.scss";
 
 function Intro() {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
   return (
     <section ref={ref} id="home" className="intro">
       <div className="intro__circle">
