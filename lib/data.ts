@@ -18,10 +18,10 @@ export const links = [
     name: "Skills",
     hash: "#skills",
   },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
+  // {
+  //   name: "Experience",
+  //   hash: "#experience",
+  // },
   {
     name: "Contact",
     hash: "#contact",
@@ -45,7 +45,7 @@ export const projectsData = [
   },
 ] as const;
 
-export const SKILLSDATA = [
+export const SKILLS_DATA = [
   "Agila Metoder",
   "Cypress",
   "Express",
@@ -65,4 +65,21 @@ export const SKILLSDATA = [
   "SASS / CSS",
   "C#",
   "SQL",
+] as const;
+
+export const EXPERIENCE_DATA = [
+  {
+    title: "2024",
+    cardTitle: "Hills Golf & Sports Club",
+    cardSubtitle: "Göteborg",
+    cardDetailedText: "I work as a bartender at Hills Golf & Sports Club.",
+  },
+  {
+    date: Date.now(),
+    cardTitle: "Frontend Developer",
+    // location: "Eco Hero",
+    // description: "I created a landing page for a company in school.",
+    // icon: React.createElement(CgWorkAlt),
+    // date: "2021",
+  },
 ] as const;

@@ -1,6 +1,6 @@
 "use client";
 
-import { SKILLSDATA } from "@/lib/data";
+import { SKILLS_DATA } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading/SectionHeading";
@@ -26,7 +26,7 @@ function Skills() {
     <section id="skills" ref={ref} className="skills">
       <SectionHeading>My skills</SectionHeading>
       <ul className="skills__list">
-        {SKILLSDATA.map((skill, index) => (
+        {SKILLS_DATA.map((skill, index) => (
           <motion.li
             className="skills__list__item"
             key={index}
