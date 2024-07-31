@@ -2,11 +2,11 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import { useSectionInView } from "@/lib/hooks";
-import SendIcon from "@mui/icons-material/Send";
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+import SubmitButton from "../Buttons/SubmitButton";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import "./Contact.scss";
 
 function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -28,7 +28,13 @@ function Contact() {
 
       <form
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
+
+          toast.success("Email sent successfully");
         }}
       >
         <TextField
@@ -53,15 +59,8 @@ function Contact() {
           rows={8}
           inputProps={{ maxLength: 500 }}
         />
-        <Button
-          type="submit"
-          sx={{ marginTop: "1rem" }}
-          className="send-button"
-          variant="contained"
-          endIcon={<SendIcon />}
-        >
-          Submit
-        </Button>
+
+        <SubmitButton />
       </form>
     </motion.section>
   );
