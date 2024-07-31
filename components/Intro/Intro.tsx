@@ -1,5 +1,6 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
 import { useSectionInView } from "@/lib/hooks";
 import DennisPNG from "@/public/dennis2.png";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -13,6 +14,7 @@ import "./Intro.scss";
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section ref={ref} id="home" className="intro">
@@ -64,6 +66,10 @@ function Intro() {
           variant="contained"
           endIcon={<KeyboardDoubleArrowRightIcon />}
           href="#contact"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
         </Button>
