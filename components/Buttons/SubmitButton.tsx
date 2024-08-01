@@ -20,7 +20,7 @@ export default function SubmitButton() {
   );
 }
 
-// Material UI Styles
+// Material UI SubmitButton Styles
 const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
   marginTop: "1rem",
   marginInline: "auto",

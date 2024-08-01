@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { ActiveSectionContextProvider } from "@/context/ActiveSectionContextProvider";
 import type { Metadata } from "next";
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
           <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
