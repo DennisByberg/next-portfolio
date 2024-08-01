@@ -2,7 +2,7 @@
 import { useSectionInView } from "@/lib/hooks";
 import { Box, SxProps, Theme, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import SectionHeading from "./SectionHeading/SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 export default function About() {
   const { ref } = useSectionInView("About");

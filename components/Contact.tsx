@@ -6,7 +6,7 @@ import { Box, TextField, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import SubmitButton from "./Buttons/SubmitButton";
-import SectionHeading from "./SectionHeading/SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
