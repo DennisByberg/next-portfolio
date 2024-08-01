@@ -2,31 +2,36 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import { useSectionInView } from "@/lib/hooks";
-import { TextField } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import SubmitButton from "../Buttons/SubmitButton";
-import SectionHeading from "../SectionHeading/SectionHeading";
+import SubmitButton from "./Buttons/SubmitButton";
+import SectionHeading from "./SectionHeading/SectionHeading";
 
-function Contact() {
+export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const MY_EMAIL = "dennis.byberg@hotmail.com";
 
   return (
-    <motion.section
-      ref={ref}
+    <Box
+      component={motion.section}
       id="contact"
+      ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p>
+      <Typography paragraph={true}>
         Please contact me directly at{" "}
-        <a href="mailto:dennis.byberg@hotmail.com">dennis.byberg@hotmail.com</a>
-      </p>
+        <Typography component={"a"} href={`mailto:${MY_EMAIL}`}>
+          {MY_EMAIL}
+        </Typography>
+      </Typography>
 
-      <form
+      <Box
+        component={"form"}
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
@@ -41,7 +46,7 @@ function Contact() {
           type="email"
           name="senderEmail"
           required
-          sx={{ marginTop: "1rem" }}
+          sx={CONTACT_TEXTFIELD_STYLE}
           fullWidth
           id="outlined-basic"
           label="Your email"
@@ -49,7 +54,7 @@ function Contact() {
           inputProps={{ maxLength: 100 }}
         />
         <TextField
-          sx={{ marginTop: "1rem" }}
+          sx={CONTACT_TEXTFIELD_STYLE}
           name="message"
           id="outlined-textarea"
           label="Your message"
@@ -61,9 +66,12 @@ function Contact() {
         />
 
         <SubmitButton />
-      </form>
-    </motion.section>
+      </Box>
+    </Box>
   );
 }
 
-export default Contact;
+// Material UI Contact styles
+const CONTACT_TEXTFIELD_STYLE = {
+  marginTop: "1rem",
+};
