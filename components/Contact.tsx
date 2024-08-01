@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { sendEmail } from "@/actions/sendEmail";
-import { useSectionInView } from "@/lib/hooks";
-import { Box, SxProps, TextField, Theme, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import toast from "react-hot-toast";
-import SubmitButton from "./Buttons/SubmitButton";
-import SectionHeading from "./SectionHeading";
+import { sendEmail } from '@/actions/sendEmail';
+import { useSectionInView } from '@/lib/hooks';
+import { Box, SxProps, TextField, Theme, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
+import SubmitButton from './Buttons/SubmitButton';
+import SectionHeading from './SectionHeading';
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact");
-  const MY_EMAIL = "dennis.byberg@hotmail.com";
+  const { ref } = useSectionInView('Contact');
+  const MY_EMAIL = 'dennis.byberg@hotmail.com';
 
   return (
     <Box
       component={motion.section}
-      id="contact"
+      id={'contact'}
       ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -24,14 +24,14 @@ export default function Contact() {
     >
       <SectionHeading>Contact Me</SectionHeading>
       <Typography paragraph={true}>
-        Please contact me directly at{" "}
-        <Typography component={"a"} href={`mailto:${MY_EMAIL}`}>
+        Please contact me directly at{' '}
+        <Typography component={'a'} href={`mailto:${MY_EMAIL}`}>
           {MY_EMAIL}
         </Typography>
       </Typography>
 
       <Box
-        component={"form"}
+        component={'form'}
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
@@ -39,25 +39,25 @@ export default function Contact() {
             return;
           }
 
-          toast.success("Email sent successfully");
+          toast.success('Email sent successfully');
         }}
       >
         <TextField
-          type="email"
-          name="senderEmail"
+          type={'email'}
+          name={'senderEmail'}
           required
           sx={CONTACT_TEXTFIELD_STYLE}
           fullWidth
-          id="outlined-basic"
-          label="Your email"
-          variant="outlined"
+          id={'outlined-basic'}
+          label={'Your email'}
+          variant={'outlined'}
           inputProps={{ maxLength: 100 }}
         />
         <TextField
           sx={CONTACT_TEXTFIELD_STYLE}
-          name="message"
-          id="outlined-textarea"
-          label="Your message"
+          name={'message'}
+          id={'outlined-textarea'}
+          label={'Your message'}
           multiline
           required
           fullWidth
@@ -73,5 +73,5 @@ export default function Contact() {
 
 // Material UI Contact styles
 const CONTACT_TEXTFIELD_STYLE: SxProps<Theme> = {
-  marginTop: "1rem",
+  marginTop: '1rem',
 };

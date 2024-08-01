@@ -1,14 +1,14 @@
-"use client";
-import { projectsData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
-import { Box, SxProps, Theme } from "@mui/material";
-import { motion } from "framer-motion";
-import React from "react";
-import Project from "./Project/Project";
-import SectionHeading from "./SectionHeading";
+'use client';
+import { projectsData } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
+import { Box, SxProps, Theme } from '@mui/material';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Project from './Project/Project';
+import SectionHeading from './SectionHeading';
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView('Projects', 0.5);
 
   return (
     <Box
@@ -21,7 +21,7 @@ export default function Projects() {
       ref={ref}
     >
       <SectionHeading>My Projects</SectionHeading>
-      <Box component={"div"}>
+      <Box component={'div'}>
         {projectsData.map((project) => (
           <React.Fragment key={project.id}>
             <Project {...project} />
@@ -34,5 +34,5 @@ export default function Projects() {
 
 // Material UI Projects styles
 const PROJECTS_SECTION_STYLE: SxProps<Theme> = {
-  scrollMarginTop: "7rem",
+  scrollMarginTop: '7rem',
 };

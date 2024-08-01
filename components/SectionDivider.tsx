@@ -1,7 +1,7 @@
-"use client";
-import { Box, SxProps, Theme } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import { motion } from "framer-motion";
+'use client';
+import { Box, SxProps, Theme } from '@mui/material';
+import { grey } from '@mui/material/colors';
+import { motion } from 'framer-motion';
 
 export default function SectionDivider() {
   return (
@@ -18,14 +18,14 @@ export default function SectionDivider() {
 // Material UI SectionDivider styles
 const SECTION_DIVIDER_STYLE: SxProps<Theme> = {
   backgroundColor: grey[200],
-  marginTop: "4rem",
-  marginBottom: "4rem",
-  height: "4rem",
-  width: "0.25rem",
-  borderRadius: "99px",
-  display: "none",
+  marginTop: '4rem',
+  marginBottom: '4rem',
+  height: '4rem',
+  width: '0.25rem',
+  borderRadius: '99px',
+  display: 'none',
 
-  "@media (min-width: 640px)": {
-    display: "block",
+  '@media (min-width: 640px)': {
+    display: 'block',
   },
 };
