@@ -2,7 +2,7 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import { useSectionInView } from "@/lib/hooks";
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, SxProps, TextField, Theme, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import SubmitButton from "./Buttons/SubmitButton";
@@ -72,6 +72,6 @@ export default function Contact() {
 }
 
 // Material UI Contact styles
-const CONTACT_TEXTFIELD_STYLE = {
+const CONTACT_TEXTFIELD_STYLE: SxProps<Theme> = {
   marginTop: "1rem",
 };

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { SxProps, Theme, Typography } from "@mui/material";
 
 export default function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +9,7 @@ export default function SectionHeading({ children }: { children: React.ReactNode
 }
 
 // Material UI SectionHeading styles
-const SECTION_HEADING_TEXT_STYLE = {
+const SECTION_HEADING_TEXT_STYLE: SxProps<Theme> = {
   fontSize: "1.5rem",
   fontWeight: "normal",
   textTransform: "capitalize",
