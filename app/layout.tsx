@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Typography component={'html'} sx={ROOT_LAYOUT_HTML_STYLE} lang="en">
+    <Typography component={'html'} sx={ROOT_LAYOUT_HTML_STYLE} lang={'en'}>
       <Typography
         component={'body'}
         sx={ROOT_LAYOUT_BODY_STYLE}
@@ -31,7 +31,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-          <Toaster position="top-right" />
+          <Toaster position={'top-right'} />
         </ActiveSectionContextProvider>
       </Typography>
     </Typography>
