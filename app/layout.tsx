@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer';
-import Header from '@/components/Header/Header';
+import Header from '@/components/Header';
 import { ActiveSectionContextProvider } from '@/context/ActiveSectionContextProvider';
 import { SxProps, Theme, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
