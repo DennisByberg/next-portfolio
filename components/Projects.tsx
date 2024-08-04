@@ -4,7 +4,7 @@ import { useSectionInView } from '@/lib/hooks';
 import { Box, SxProps, Theme } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
-import Project from './Project/Project';
+import Project from './Project';
 import SectionHeading from './SectionHeading';
 
 export default function Projects() {
