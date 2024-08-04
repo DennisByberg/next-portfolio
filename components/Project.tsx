@@ -25,7 +25,7 @@ export default function Project({ title, description, tags, imageUrl }: TProject
     border:
       theme.palette.mode === 'light' ? '1px solid #00000033' : `1px solid ${grey[200]}`,
     overflow: 'hidden',
-    boxShadow: '2px 3px 1px white',
+    boxShadow: theme.palette.mode === 'dark' ? '1px 2px 3px white' : '0 0 0 white',
     position: 'relative',
     marginBottom: '0.75rem',
     borderRadius: 5,
