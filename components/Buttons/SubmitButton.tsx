@@ -25,6 +25,7 @@ const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
   marginTop: '1rem',
   marginInline: 'auto',
   textAlign: 'center',
+  color: grey[50],
   backgroundColor: grey[800],
   fontWeight: 600,
   borderRadius: '99px',

@@ -1,8 +1,15 @@
 'use client';
-import { Button, PaletteMode } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightsStayIcon from '@mui/icons-material/NightsStay';
+import { IconButton, PaletteMode } from '@mui/material';
+import { common, grey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
-import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import {
+  createTheme,
+  ThemeProvider as MuiThemeProvider,
+  SxProps,
+  Theme,
+} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import * as React from 'react';
 
@@ -45,12 +52,34 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     setMode((prevMode: PaletteMode) => (prevMode === 'dark' ? 'light' : 'dark'));
   };
 
+  // Material UI ThemeProvider Styles
+  const THEME_PROVIDER_BUTTON_STYLE: SxProps<Theme> = {
+    position: 'fixed',
+    width: 50,
+    height: 50,
+    bottom: 15,
+    right: 15,
+    backgroundColor: theme.palette.mode === 'light' ? common.white : grey[800],
+    color: theme.palette.mode === 'light' ? common.black : common.white,
+    zIndex: 1000,
+
+    '@media (max-width: 640px)': {
+      width: 35,
+      height: 35,
+    },
+  };
+
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Button onClick={toggleTheme} variant="contained" color="primary">
-        Theme: {theme.palette.mode}
-      </Button>
+      <IconButton
+        size="small"
+        sx={THEME_PROVIDER_BUTTON_STYLE}
+        onClick={toggleTheme}
+        color="inherit"
+      >
+        {theme.palette.mode === 'light' ? <NightsStayIcon /> : <LightModeIcon />}
+      </IconButton>
       {children}
     </MuiThemeProvider>
   );

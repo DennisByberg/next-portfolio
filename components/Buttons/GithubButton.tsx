@@ -1,7 +1,19 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { IconButton, SxProps, Theme } from '@mui/material';
+import { IconButton, SxProps, Theme, useTheme } from '@mui/material';
+import { common } from '@mui/material/colors';
 
 export default function GithubButton() {
+  const theme = useTheme();
+
+  // Material UI GithubButton Styles
+  const GITHUB_BUTTON_STYLE: SxProps<Theme> = {
+    color: `${theme.palette.mode === 'light' ? common.black : common.white}`,
+    '&:active': {
+      transform: 'translateY(3px)',
+      transition: '100ms',
+    },
+  };
+
   return (
     <IconButton
       sx={GITHUB_BUTTON_STYLE}
@@ -13,13 +25,3 @@ export default function GithubButton() {
     </IconButton>
   );
 }
-
-// Material UI GithubButton Styles
-const GITHUB_BUTTON_STYLE: SxProps<Theme> = {
-  color: '#0e1118',
-
-  '&:active': {
-    transform: 'translateY(3px)',
-    transition: '100ms',
-  },
-};
