@@ -1,10 +1,11 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { ActiveSectionContextProvider } from '@/context/ActiveSectionContextProvider';
+import ThemeProvider from '@/context/ThemeProvider';
 import { SxProps, Theme, Typography } from '@mui/material';
-import { grey } from '@mui/material/colors';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import './globals.css';
 
@@ -27,12 +28,14 @@ export default function RootLayout({
         sx={ROOT_LAYOUT_BODY_STYLE}
         className={inter.className}
       >
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster position={'top-right'} />
-        </ActiveSectionContextProvider>
+        <ThemeProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position={'top-right'} />
+          </ActiveSectionContextProvider>
+        </ThemeProvider>
       </Typography>
     </Typography>
   );
@@ -44,8 +47,6 @@ const ROOT_LAYOUT_HTML_STYLE: SxProps<Theme> = {
 };
 
 const ROOT_LAYOUT_BODY_STYLE: SxProps<Theme> = {
-  backgroundColor: grey[100],
-  color: grey[900],
   position: 'relative',
   paddingTop: '8rem',
 };
