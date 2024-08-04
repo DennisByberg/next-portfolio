@@ -4,6 +4,11 @@ import { Button, SxProps, Theme } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Dispatch, SetStateAction } from 'react';
 
+interface IContactMeButtonProps {
+  setActiveSection: Dispatch<SetStateAction<SectionName>>;
+  setTimeOfLastClick: Dispatch<SetStateAction<number>>;
+}
+
 export default function ContactMeButton({
   setActiveSection,
   setTimeOfLastClick,
@@ -22,12 +27,6 @@ export default function ContactMeButton({
       Contact me here
     </Button>
   );
-}
-
-// ContactMeButton Interfaces
-interface IContactMeButtonProps {
-  setActiveSection: Dispatch<SetStateAction<SectionName>>;
-  setTimeOfLastClick: Dispatch<SetStateAction<number>>;
 }
 
 // Material UI ContactMeButton Styles

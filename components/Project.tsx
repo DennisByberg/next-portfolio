@@ -6,7 +6,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+type TProjectProps = (typeof projectsData)[number];
+
+export default function Project({ title, description, tags, imageUrl }: TProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -69,9 +71,6 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
     </Box>
   );
 }
-
-// Project interfaces & types
-type ProjectProps = (typeof projectsData)[number];
 
 // Material UI Project styles
 const PROJECT_SECTION_STYLE: SxProps<Theme> = {
