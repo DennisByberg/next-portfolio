@@ -1,5 +1,4 @@
 'use client';
-
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { Box, SxProps, TextField, Theme, Typography } from '@mui/material';
