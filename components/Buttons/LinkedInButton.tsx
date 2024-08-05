@@ -1,7 +1,8 @@
+import { LINKED_IN_BUTTON_STYLE } from '@/styles/buttonsSX';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { IconButton, SxProps, Theme } from '@mui/material';
+import { IconButton } from '@mui/material';
 
-export default function LinkedInButton() {
+function LinkedInButton() {
   return (
     <IconButton
       sx={LINKED_IN_BUTTON_STYLE}
@@ -14,12 +15,4 @@ export default function LinkedInButton() {
   );
 }
 
-// Material UI LinkedInButton Styles
-const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
-  color: '#126bc4',
-
-  '&:active': {
-    transform: 'translateY(3px)',
-    transition: '100ms',
-  },
-};
+export default LinkedInButton;

@@ -1,9 +1,9 @@
+import { SUBMIT_BUTTON_STYLE } from '@/styles/buttonsSX';
 import SendIcon from '@mui/icons-material/Send';
-import { Button, CircularProgress, SxProps, Theme } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { Button, CircularProgress } from '@mui/material';
 import { useFormStatus } from 'react-dom';
 
-export default function SubmitButton() {
+function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
@@ -20,25 +20,4 @@ export default function SubmitButton() {
   );
 }
 
-// Material UI SubmitButton Styles
-const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
-  marginTop: '1rem',
-  marginInline: 'auto',
-  textAlign: 'center',
-  color: grey[50],
-  backgroundColor: grey[800],
-  fontWeight: 600,
-  borderRadius: '99px',
-  '&:hover': {
-    backgroundColor: grey[900],
-  },
-  '&:active': {
-    transform: 'translateY(3px)',
-    transition: '100ms',
-  },
-  '@media (max-width: 500px)': {
-    width: '100%',
-    padding: '1rem',
-    borderRadius: '5px',
-  },
-};
+export default SubmitButton;

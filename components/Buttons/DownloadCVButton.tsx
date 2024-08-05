@@ -1,27 +1,8 @@
+import { DOWNLOAD_CV_BUTTON_STYLE } from '@/styles/buttonsSX';
 import DownloadIcon from '@mui/icons-material/Download';
-import { Button, SxProps, Theme, useTheme } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { Button } from '@mui/material';
 
-export default function DownloadCVButton() {
-  const theme = useTheme();
-
-  // Material UI DownloadCVButton Styles
-  const DOWNLOAD_CV_BUTTON_STYLE: SxProps<Theme> = {
-    backgroundColor: grey[50],
-    color: grey[900],
-    fontWeight: 600,
-    borderRadius: 99,
-
-    '&:hover': {
-      backgroundColor: theme.palette.mode === 'light' ? grey[200] : grey[400],
-    },
-
-    '&:active': {
-      transform: 'translateY(3px)',
-      transition: '100ms',
-    },
-  };
-
+function DownloadCVButton() {
   return (
     <Button
       sx={DOWNLOAD_CV_BUTTON_STYLE}
@@ -34,3 +15,5 @@ export default function DownloadCVButton() {
     </Button>
   );
 }
+
+export default DownloadCVButton;
