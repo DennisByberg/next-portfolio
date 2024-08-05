@@ -1,5 +1,4 @@
 'use client';
-
 import { TSectionName } from '@/types/globalTypes';
 import { createContext, useContext, useState } from 'react';
 
@@ -10,13 +9,9 @@ interface IActiveSectionContextType {
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const ActiveSectionContext = createContext<IActiveSectionContextType | null>(null);
+const ActiveSectionContext = createContext<IActiveSectionContextType | null>(null);
 
-export function ActiveSectionContextProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function ActiveSectionContextProvider({ children }: { children: React.ReactNode }) {
   const [activeSection, setActiveSection] = useState<TSectionName>('Home');
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
@@ -29,7 +24,7 @@ export function ActiveSectionContextProvider({
   );
 }
 
-export function useActiveSectionContext() {
+function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
   if (!context) {
     throw new Error(
@@ -38,3 +33,5 @@ export function useActiveSectionContext() {
   }
   return context;
 }
+
+export { ActiveSectionContext, ActiveSectionContextProvider, useActiveSectionContext };
