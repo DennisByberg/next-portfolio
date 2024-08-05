@@ -1,7 +1,8 @@
 'use client';
+
 import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
-import { links } from '@/lib/data';
-import { Box, SxProps, Theme, useTheme } from '@mui/material';
+import LINKS_DATA from '@/data/linksData';
+import { Box, SxProps, Theme } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,7 +10,6 @@ import Link from 'next/link';
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  const theme = useTheme();
 
   // Material UI Header Styles
   const HEADER_STYLE: SxProps<Theme> = {
@@ -111,7 +111,7 @@ export default function Header() {
       >
         <Box component={'nav'} sx={HEADER_NAV_STYLE}>
           <Box component={'ul'} sx={HEADER_UL_STYLE}>
-            {links.map((link) => (
+            {LINKS_DATA.map((link) => (
               <Box
                 component={motion.li}
                 sx={HEADER_LIST_ITEM_STYLE}

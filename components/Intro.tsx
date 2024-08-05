@@ -1,8 +1,8 @@
 'use client';
 import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
-import getFormattedIntroText from '@/lib/helpers/getFormattedIntroText';
-import { useSectionInView } from '@/lib/hooks';
+import { useSectionInView } from '@/hooks/useSectionInView';
 import DennisPNG from '@/public/dennis2.png';
+import getFormattedIntroText from '@/utils/getFormattedIntroText';
 import { Box, SxProps, Theme } from '@mui/material';
 import { common } from '@mui/material/colors';
 import { motion } from 'framer-motion';

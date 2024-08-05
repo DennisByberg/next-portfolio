@@ -2,34 +2,7 @@ import ecoHeroPNG from '@/public/projects-images/eco-hero.png';
 import movitaPNG from '@/public/projects-images/movita.png';
 import portfolioPNG from '@/public/projects-images/portfolio.png';
 
-export const links = [
-  {
-    name: 'Home',
-    hash: '#home',
-  },
-  {
-    name: 'About',
-    hash: '#about',
-  },
-  {
-    name: 'Projects',
-    hash: '#projects',
-  },
-  {
-    name: 'Skills',
-    hash: '#skills',
-  },
-  // {
-  //   name: "Experience",
-  //   hash: "#experience",
-  // },
-  {
-    name: 'Contact',
-    hash: '#contact',
-  },
-] as const;
-
-export const projectsData = [
+export const PROJECTS_DATA = [
   {
     id: 1,
     title: 'Next Portfolio',
@@ -63,35 +36,4 @@ export const projectsData = [
   },
 ] as const;
 
-export const SKILLS_DATA = [
-  'Agile Methodology',
-  'CSS/SASS',
-  'Cypress',
-  'Express',
-  'Firebase',
-  'Framer Motion',
-  'Git',
-  'Github',
-  'HTML',
-  'JavaScript',
-  'Jest',
-  'TypeScript',
-  'MongoDB',
-  'Next.js',
-  'Node',
-  'React',
-  'React Testing Library',
-  'Redux',
-  'UI/UX',
-  'C#',
-  'SQL',
-] as const;
-
-export const EXPERIENCE_DATA = [
-  {
-    title: '2024',
-    cardTitle: 'Hills Golf & Sports Club',
-    cardSubtitle: 'Göteborg',
-    cardDetailedText: 'I work as a bartender at Hills Golf & Sports Club.',
-  },
-] as const;
+export default PROJECTS_DATA;

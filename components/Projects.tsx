@@ -1,6 +1,7 @@
 'use client';
-import { projectsData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
+
+import PROJECTS_DATA from '@/data/projectsData';
+import { useSectionInView } from '@/hooks/useSectionInView';
 import { Box, SxProps, Theme } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -22,7 +23,7 @@ export default function Projects() {
     >
       <SectionHeading>My Projects</SectionHeading>
       <Box component={'div'}>
-        {projectsData.map((project) => (
+        {PROJECTS_DATA.map((project) => (
           <React.Fragment key={project.id}>
             <Project {...project} />
           </React.Fragment>

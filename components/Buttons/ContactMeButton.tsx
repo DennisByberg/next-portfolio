@@ -1,11 +1,11 @@
-import { SectionName } from '@/lib/types';
+import { TSectionName } from '@/types/globalTypes';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Button, SxProps, Theme } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Dispatch, SetStateAction } from 'react';
 
 interface IContactMeButtonProps {
-  setActiveSection: Dispatch<SetStateAction<SectionName>>;
+  setActiveSection: Dispatch<SetStateAction<TSectionName>>;
   setTimeOfLastClick: Dispatch<SetStateAction<number>>;
 }
 

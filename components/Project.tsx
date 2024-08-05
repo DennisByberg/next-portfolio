@@ -1,12 +1,12 @@
 'use client';
-import { projectsData } from '@/lib/data';
+import PROJECTS_DATA from '@/data/projectsData';
 import { Box, SxProps, Theme, Typography, useTheme } from '@mui/material';
 import { common, grey } from '@mui/material/colors';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-type TProjectProps = (typeof projectsData)[number];
+type TProjectProps = (typeof PROJECTS_DATA)[number];
 
 export default function Project({ title, description, tags, imageUrl }: TProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export default function Project({ title, description, tags, imageUrl }: TProject
     border:
       theme.palette.mode === 'light' ? '1px solid #00000033' : `1px solid ${grey[200]}`,
     overflow: 'hidden',
-    boxShadow: theme.palette.mode === 'dark' ? '1px 2px 3px white' : '0 0 0 white',
+    boxShadow: theme.palette.mode === 'dark' ? '1px 2px 3px white' : '1px 1px 1px black',
     position: 'relative',
     marginBottom: '0.75rem',
     borderRadius: 5,

@@ -1,7 +1,7 @@
 'use client';
-import { sendEmail } from '@/actions/sendEmail';
-import { useSectionInView } from '@/lib/hooks';
-import { Box, SxProps, TextField, Theme, Typography } from '@mui/material';
+import sendEmail from '@/actions/sendEmail';
+import { useSectionInView } from '@/hooks/useSectionInView';
+import { Box, TextField, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import SubmitButton from './Buttons/SubmitButton';
@@ -22,7 +22,7 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <Typography paragraph={true}>
+      <Typography paragraph={true} sx={{ textAlign: 'center' }}>
         Please contact me directly at{' '}
         <Typography component={'a'} href={`mailto:${MY_EMAIL}`}>
           {MY_EMAIL}
@@ -45,7 +45,7 @@ export default function Contact() {
           type={'email'}
           name={'senderEmail'}
           required
-          sx={CONTACT_TEXTFIELD_STYLE}
+          sx={{ mt: '1rem' }}
           fullWidth
           id={'outlined-basic'}
           label={'Your email'}
@@ -53,7 +53,7 @@ export default function Contact() {
           inputProps={{ maxLength: 100 }}
         />
         <TextField
-          sx={CONTACT_TEXTFIELD_STYLE}
+          sx={{ mt: '1rem' }}
           name={'message'}
           id={'outlined-textarea'}
           label={'Your message'}
@@ -69,8 +69,3 @@ export default function Contact() {
     </Box>
   );
 }
-
-// Material UI Contact styles
-const CONTACT_TEXTFIELD_STYLE: SxProps<Theme> = {
-  marginTop: '1rem',
-};

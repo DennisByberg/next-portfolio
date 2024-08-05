@@ -1,12 +1,4 @@
-export function validateString(value: unknown, maxLength: number) {
-  if (!value || typeof value !== 'string' || value.length > maxLength) {
-    return false;
-  }
-
-  return true;
-}
-
-export function getErrorMessage(error: unknown): string {
+function getErrorMessage(error: unknown): string {
   let message: string;
 
   if (error instanceof Error) {
@@ -21,3 +13,5 @@ export function getErrorMessage(error: unknown): string {
 
   return message;
 }
+
+export default getErrorMessage;

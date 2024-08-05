@@ -1,6 +1,7 @@
 'use client';
-import { SKILLS_DATA } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
+
+import SKILLS_DATA from '@/data/skillsData';
+import { useSectionInView } from '@/hooks/useSectionInView';
 import { Box, SxProps, Theme } from '@mui/material';
 import { common, grey } from '@mui/material/colors';
 import { motion } from 'framer-motion';
