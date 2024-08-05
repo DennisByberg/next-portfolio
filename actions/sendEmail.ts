@@ -1,5 +1,4 @@
 'use server';
-
 import ContactFormEmail from '@/email/ContactFormEmail';
 import getErrorMessage from '@/utils/getErrorMessage';
 import validateString from '@/utils/validateString';
