@@ -5,7 +5,10 @@ import validateString from '@/utils/validateString';
 import React from 'react';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEY;
+console.log('RESEND_API_KEY:', resendApiKey);
+
+const resend = new Resend(resendApiKey);
 
 async function sendEmail(formData: FormData) {
   const senderEmail = formData.get('senderEmail');
