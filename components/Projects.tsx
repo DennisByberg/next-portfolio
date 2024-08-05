@@ -1,20 +1,19 @@
 'use client';
-
 import PROJECTS_DATA from '@/data/projectsData';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { Box, SxProps, Theme } from '@mui/material';
+import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Project from './Project';
 import SectionHeading from './SectionHeading';
 
-export default function Projects() {
+function Projects() {
   const { ref } = useSectionInView('Projects', 0.5);
 
   return (
     <Box
       component={motion.section}
-      sx={PROJECTS_SECTION_STYLE}
+      sx={{ scrollMarginTop: '7rem' }}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
@@ -33,7 +32,4 @@ export default function Projects() {
   );
 }
 
-// Material UI Projects styles
-const PROJECTS_SECTION_STYLE: SxProps<Theme> = {
-  scrollMarginTop: '7rem',
-};
+export default Projects;
