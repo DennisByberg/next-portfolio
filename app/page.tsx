@@ -4,9 +4,10 @@ import Intro from '@/components/Intro';
 import Projects from '@/components/Projects';
 import SectionDivider from '@/components/SectionDivider';
 import Skills from '@/components/Skills';
-import { Box, SxProps, Theme } from '@mui/material';
+import { HOME_MAIN_STYLE } from '@/styles/pageSX';
+import { Box } from '@mui/material';
 
-export default function Home() {
+function Home() {
   return (
     <Box component={'main'} sx={HOME_MAIN_STYLE}>
       <Intro />
@@ -19,10 +20,4 @@ export default function Home() {
   );
 }
 
-// Material UI Home styles
-const HOME_MAIN_STYLE: SxProps<Theme> = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  paddingInline: '1rem',
-};
+export default Home;
