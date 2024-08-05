@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import SubmitButton from './Buttons/SubmitButton';
 import SectionHeading from './SectionHeading';
 
-export default function Contact() {
+function Contact() {
   const { ref } = useSectionInView('Contact');
   const MY_EMAIL = 'dennis.byberg@hotmail.com';
 
@@ -69,3 +69,5 @@ export default function Contact() {
     </Box>
   );
 }
+
+export default Contact;
