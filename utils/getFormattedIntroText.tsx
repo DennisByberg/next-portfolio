@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 
-export default function getFormattedIntroText() {
+function getFormattedIntroText() {
   const FIRST_NAME = 'Dennis';
   const ROLE = 'frontend developer';
   const EXPERIENCE = '3 years';
@@ -30,3 +30,5 @@ export default function getFormattedIntroText() {
     </>
   );
 }
+
+export default getFormattedIntroText;
