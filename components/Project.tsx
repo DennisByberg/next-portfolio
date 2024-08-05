@@ -13,7 +13,7 @@ import { useRef } from 'react';
 
 type TProjectProps = (typeof PROJECTS_DATA)[number];
 
-function Project({ title, description, tags, imageUrl }: TProjectProps) {
+function Project({ title, description, tags, imageUrl, githubURL }: TProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,33 +32,40 @@ function Project({ title, description, tags, imageUrl }: TProjectProps) {
         opacity: opacityProgess,
       }}
     >
-      <Box component={'section'} sx={PROJECT_SECTION_STYLE}>
-        <Box
-          component={'div'}
-          className={
-            'pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]'
-          } // Tailwind
-        >
-          <Typography variant={'h3'} sx={PROJECT_TITLE_STYLE}>
-            {title}
-          </Typography>
-          <Typography paragraph={true} sx={PROJECT_DESCRIPTION_STYLE}>
-            {description}
-          </Typography>
-          <Box component={'ul'} sx={PROJECT_UL_STYLE}>
-            {tags.map((tag, index) => (
-              <Box component={'li'} sx={PROJECT_LIST_ITEM_STYLE} key={index}>
-                {tag}
-              </Box>
-            ))}
+      <Box
+        component={'a'}
+        href={githubURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: 'none' }}
+      >
+        <Box component={'section'} sx={PROJECT_SECTION_STYLE}>
+          <Box
+            component={'div'}
+            className={
+              'pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]'
+            } // Tailwind
+          >
+            <Typography variant={'h3'} sx={PROJECT_TITLE_STYLE}>
+              {title}
+            </Typography>
+            <Typography paragraph={true} sx={PROJECT_DESCRIPTION_STYLE}>
+              {description}
+            </Typography>
+            <Box component={'ul'} sx={PROJECT_UL_STYLE}>
+              {tags.map((tag, index) => (
+                <Box component={'li'} sx={PROJECT_LIST_ITEM_STYLE} key={index}>
+                  {tag}
+                </Box>
+              ))}
+            </Box>
           </Box>
-        </Box>
 
-        <Image
-          src={imageUrl}
-          alt={'Project I worked on'}
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          <Image
+            src={imageUrl}
+            alt={'Project I worked on'}
+            quality={95}
+            className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
@@ -70,8 +77,9 @@ function Project({ title, description, tags, imageUrl }: TProjectProps) {
         group-even:group-hover:rotate-2
 
         group-even:right-[initial] group-even:-left-40"
-          // Tailwind
-        />
+            // Tailwind
+          />
+        </Box>
       </Box>
     </Box>
   );

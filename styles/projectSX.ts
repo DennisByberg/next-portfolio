@@ -5,6 +5,7 @@ export const PROJECT_SECTION_STYLE: SxProps<Theme> = () => {
   const theme = useTheme();
 
   return {
+    cursor: 'pointer',
     backgroundColor: theme.palette.mode === 'light' ? grey[200] : grey[900],
     maxWidth: '50rem',
     border:
