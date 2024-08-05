@@ -11,11 +11,15 @@ async function sendEmail(formData: FormData) {
   const senderEmail = formData.get('senderEmail');
   const message = formData.get('message');
 
+  console.log('Received form data:', { senderEmail, message });
+
   if (!validateString(senderEmail, 100)) {
+    console.error('Invalid sender email:', senderEmail);
     return { error: 'Invalid sender email' };
   }
 
   if (!validateString(message, 500)) {
+    console.error('Invalid message:', message);
     return { error: 'Invalid message' };
   }
 
@@ -31,9 +35,12 @@ async function sendEmail(formData: FormData) {
         senderEmail: senderEmail as string,
       }),
     });
+    console.log('Email sent successfully:', data);
   } catch (error: unknown) {
+    const errorMessage = getErrorMessage(error);
+    console.error('Error sending email:', errorMessage);
     return {
-      error: getErrorMessage(error),
+      error: errorMessage,
     };
   }
 
