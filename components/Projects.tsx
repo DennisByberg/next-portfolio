@@ -1,6 +1,6 @@
 'use client';
 import PROJECTS_DATA from '@/data/projectsData';
-import { useSectionInView } from '@/hooks/useSectionInView';
+import useSectionInView from '@/hooks/useSectionInView';
 import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';

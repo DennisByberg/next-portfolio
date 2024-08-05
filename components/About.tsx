@@ -1,5 +1,5 @@
 'use client';
-import { useSectionInView } from '@/hooks/useSectionInView';
+import useSectionInView from '@/hooks/useSectionInView';
 import { ABOUT_SECTION_STYLE } from '@/styles/aboutSX';
 import { Box, Typography } from '@mui/material';
 import { motion } from 'framer-motion';

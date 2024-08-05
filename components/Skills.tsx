@@ -1,6 +1,6 @@
 'use client';
 import SKILLS_DATA from '@/data/skillsData';
-import { useSectionInView } from '@/hooks/useSectionInView';
+import useSectionInView from '@/hooks/useSectionInView';
 import {
   SKILLS_LIST_ITEM_STYLE,
   SKILLS_LIST_STYLE,

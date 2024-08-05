@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { TSectionName } from '../types/globalTypes';
 
-export function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
+function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
   });
@@ -17,3 +17,5 @@ export function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
 
   return { ref };
 }
+
+export default useSectionInView;

@@ -1,6 +1,6 @@
 'use client';
 import sendEmail from '@/actions/sendEmail';
-import { useSectionInView } from '@/hooks/useSectionInView';
+import useSectionInView from '@/hooks/useSectionInView';
 import { Box, TextField, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';

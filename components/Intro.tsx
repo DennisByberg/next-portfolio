@@ -1,6 +1,6 @@
 'use client';
 import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
-import { useSectionInView } from '@/hooks/useSectionInView';
+import useSectionInView from '@/hooks/useSectionInView';
 import DennisPNG from '@/public/dennis2.png';
 import {
   INTRO_BUTTONS_CONTAINER_STYLE,
