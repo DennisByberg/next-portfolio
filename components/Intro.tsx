@@ -2,6 +2,7 @@
 import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
 import useSectionInView from '@/hooks/useSectionInView';
 import DennisPNG from '@/public/dennis2.png';
+import { LEFT_BG_BLUR_STYLE, RIGHT_BG_BLUR_STYLE } from '@/styles/backgroundBlurSX';
 import {
   INTRO_BUTTONS_CONTAINER_STYLE,
   INTRO_CIRCLE_STYLE,
@@ -25,6 +26,8 @@ function Intro() {
 
   return (
     <Box component={'section'} ref={ref} id={'home'} sx={INTRO_STYLE}>
+      <Box sx={RIGHT_BG_BLUR_STYLE}></Box>
+      <Box sx={LEFT_BG_BLUR_STYLE}></Box>
       <Box component={'div'} sx={INTRO_CIRCLE_STYLE}>
         <Box
           component={motion.div}
