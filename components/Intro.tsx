@@ -26,7 +26,6 @@ function Intro() {
   return (
     <Box component={'section'} ref={ref} id={'home'} sx={INTRO_STYLE}>
       <Box component={'div'} sx={INTRO_CIRCLE_STYLE}>
-        <p>test 1</p>
         <Box
           component={motion.div}
           initial={{ opacity: 0, scale: 0 }}

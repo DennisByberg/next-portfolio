@@ -6,23 +6,21 @@ import React from 'react';
 import { Resend } from 'resend';
 
 const resendApiKey = process.env.RESEND_API_KEY;
-console.log('RESEND_API_KEY:', resendApiKey);
-
 const resend = new Resend(resendApiKey);
 
 async function sendEmail(formData: FormData) {
   const senderEmail = formData.get('senderEmail');
   const message = formData.get('message');
 
-  console.log('Received form data:', { senderEmail, message });
-
+  /* Validate the sender's email address. 
+  If the email is invalid or exceeds 100 characters, return an error. */
   if (!validateString(senderEmail, 100)) {
-    console.error('Invalid sender email:', senderEmail);
     return { error: 'Invalid sender email' };
   }
 
+  /* Validate the message content.
+  If the message is invalid or exceeds 500 characters, return an error. */
   if (!validateString(message, 500)) {
-    console.error('Invalid message:', message);
     return { error: 'Invalid message' };
   }
 
@@ -38,10 +36,8 @@ async function sendEmail(formData: FormData) {
         senderEmail: senderEmail as string,
       }),
     });
-    console.log('Email sent successfully:', data);
   } catch (error: unknown) {
     const errorMessage = getErrorMessage(error);
-    console.error('Error sending email:', errorMessage);
     return {
       error: errorMessage,
     };
