@@ -26,7 +26,7 @@ export const PROJECTS_DATA = [
     title: 'Movita Juice Bar',
     description:
       'A UI/UX school project I developed, focused on creating a mini-website with an emphasis on digital accessibility',
-    githubURL: '',
+    githubURL: 'https://github.com/DennisByberg/movita-juice-bar',
     tags: ['React', 'Typescript', 'Material UI', 'SASS', 'Vite', 'Tailwind'],
     imageUrl: movitaPNG,
   },
@@ -35,7 +35,7 @@ export const PROJECTS_DATA = [
     title: 'Dictionary',
     description:
       'A dictionary application I developed, allowing users to look up word definitions using the Free Dictionary API',
-    githubURL: '',
+    githubURL: 'https://github.com/DennisByberg/dictionary',
     tags: ['React', 'TypeScript', 'Redux', 'SASS', 'Testing'],
     imageUrl: dictionaryPNG,
   },
@@ -44,7 +44,7 @@ export const PROJECTS_DATA = [
     title: 'Marks To Drink List',
     description:
       'A school project I developed, learned Redux and TypeScript through the development of a drink list application',
-    githubURL: '',
+    githubURL: 'https://github.com/DennisByberg/mocktail',
     tags: ['React', 'TypeScript', 'Redux', 'SASS', 'Vite'],
     imageUrl: marksToDrinkListPNG,
   },
@@ -53,7 +53,7 @@ export const PROJECTS_DATA = [
     title: 'Eco Hero',
     description:
       'A landing page project aimed at promoting environmental awareness and sustainability.',
-    githubURL: '',
+    githubURL: 'https://github.com/DennisByberg/eco-hero',
     tags: ['React', 'Next.js', 'TypeScript', 'Prisma', 'Tailwind', 'SASS', 'Zod'],
     imageUrl: ecoHeroPNG,
   },
