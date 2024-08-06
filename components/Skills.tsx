@@ -8,6 +8,7 @@ import {
 } from '@/styles/skillsSX';
 import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
+import DownloadSkillsButton from './Buttons/DownloadSkillsButton';
 import SectionHeading from './SectionHeading';
 
 function Skills() {
@@ -31,6 +32,7 @@ function Skills() {
   return (
     <Box component={'section'} sx={SKILLS_SECTION_STYLE} id={'skills'} ref={ref}>
       <SectionHeading>My skills</SectionHeading>
+      <DownloadSkillsButton />
       <Box component={'ul'} sx={SKILLS_LIST_STYLE}>
         {SKILLS_DATA.map((skill, index) => (
           <Box

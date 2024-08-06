@@ -12,7 +12,7 @@ export const SECTION_HEADING_TEXT_STYLE: SxProps<Theme> = () => {
 
     '@media (max-width: 640px)': {
       backgroundColor:
-        theme.palette.mode === 'light' ? alpha(purple[50], 0.5) : grey[800],
+        theme.palette.mode === 'light' ? alpha(purple[50], 0.7) : grey[800],
       marginBottom: '1rem',
       marginTop: '5rem',
       padding: '0.7rem 0',

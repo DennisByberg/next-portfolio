@@ -57,7 +57,7 @@ export const INTRO_BIGGER_BUTTONS_CONTAINER_STYLE = {
   display: 'flex',
   gap: '1rem',
 
-  '@media (max-width: 640px)': {
+  '@media (max-width: 690px)': {
     flexDirection: 'column',
   },
 };

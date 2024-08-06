@@ -2,18 +2,18 @@ import { DOWNLOAD_BUTTON_STYLE } from '@/styles/buttonsSX';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Button } from '@mui/material';
 
-function DownloadCVButton() {
+function DownloadSkillsButton() {
   return (
     <Button
       sx={DOWNLOAD_BUTTON_STYLE}
       variant={'contained'}
       endIcon={<DownloadIcon />}
-      href={'/CV.pdf'}
+      href={'/Skills.pdf'}
       download
     >
-      Download CV
+      Download Skills
     </Button>
   );
 }
 
-export default DownloadCVButton;
+export default DownloadSkillsButton;

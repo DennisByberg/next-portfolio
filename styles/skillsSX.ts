@@ -12,7 +12,12 @@ export const SKILLS_LIST_STYLE: SxProps<Theme> = {
   flexWrap: 'wrap',
   justifyContent: 'center',
   gap: '0.5rem',
+  mt: 2,
   color: grey[800],
+
+  '@media (min-width: 640px)': {
+    mt: 4,
+  },
 };
 
 export const SKILLS_LIST_ITEM_STYLE: SxProps<Theme> = {

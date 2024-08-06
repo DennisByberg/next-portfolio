@@ -18,8 +18,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ContactMeButton from './Buttons/ContactMeButton';
 import DownloadCVButton from './Buttons/DownloadCVButton';
+import DownloadSkillsButton from './Buttons/DownloadSkillsButton';
 import FacebookButton from './Buttons/FacebookButton';
 import GithubButton from './Buttons/GithubButton';
+import InstagramButton from './Buttons/InstagramButton';
 import LinkedInButton from './Buttons/LinkedInButton';
 
 function Intro() {
@@ -79,11 +81,13 @@ function Intro() {
             setTimeOfLastClick={setTimeOfLastClick}
           />
           <DownloadCVButton />
+          <DownloadSkillsButton />
         </Box>
-        <Box sx={{ display: 'flex', gap: 1 }}>
+        <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
           <GithubButton />
           <LinkedInButton />
           <FacebookButton />
+          <InstagramButton />
         </Box>
       </Box>
     </Box>

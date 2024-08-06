@@ -1,5 +1,5 @@
 import { alpha, SxProps, Theme } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { common, grey } from '@mui/material/colors';
 
 export const HEADER_BACKGROUND_STYLE: SxProps<Theme> = {
   position: 'fixed',
@@ -8,7 +8,7 @@ export const HEADER_BACKGROUND_STYLE: SxProps<Theme> = {
   height: '4.5rem',
   width: '100%',
   border: '1px solid #ffffff66',
-  backgroundColor: alpha(grey[50], 0.6),
+  backgroundColor: alpha(common.white, 0.7),
   boxShadow: '0 0 0.5rem 0 rgba(0, 0, 0, 0.03)',
   backdropFilter: 'blur(0.5rem)',
   borderRadius: 0,

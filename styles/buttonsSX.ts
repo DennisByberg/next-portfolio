@@ -17,24 +17,20 @@ export const CONTACT_ME_BUTTON_STYLE: SxProps<Theme> = {
   },
 };
 
-export const DOWNLOAD_CV_BUTTON_STYLE: SxProps<Theme> = () => {
-  const theme = useTheme();
+export const DOWNLOAD_BUTTON_STYLE: SxProps<Theme> = {
+  background: 'linear-gradient(268deg, #F0AFFF 0%, #F9E6FFFF 100%)', // Brighter gradient
+  color: grey[900],
+  fontWeight: 600,
+  borderRadius: 99,
 
-  return {
-    backgroundColor: grey[50],
-    color: grey[900],
-    fontWeight: 600,
-    borderRadius: 99,
+  '&:hover': {
+    background: 'linear-gradient(268deg, #E08CFFFF 0%, #F2D4FFFF 100%)', // Brighter gradient
+  },
 
-    '&:hover': {
-      backgroundColor: theme.palette.mode === 'light' ? grey[200] : grey[400],
-    },
-
-    '&:active': {
-      transform: 'translateY(3px)',
-      transition: '100ms',
-    },
-  };
+  '&:active': {
+    transform: 'translateY(3px)',
+    transition: '100ms',
+  },
 };
 
 export const GITHUB_BUTTON_STYLE: SxProps<Theme> = () => {
@@ -58,7 +54,7 @@ export const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
   },
 };
 
-export const FACEBOOK_BUTTON_STYLE = {
+export const FACEBOOK_BUTTON_STYLE: SxProps<Theme> = {
   color: 'rgb(8,102,255)',
 
   '&:active': {
@@ -67,13 +63,26 @@ export const FACEBOOK_BUTTON_STYLE = {
   },
 };
 
+export const INSTAGRAM_BUTTON_STYLE: SxProps<Theme> = () => {
+  const theme = useTheme();
+
+  return {
+    color: `${theme.palette.mode === 'light' ? common.black : common.white}`,
+
+    '&:active': {
+      transform: 'translateY(3px)',
+      transition: '100ms',
+    },
+  };
+};
+
 export const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
-  color: grey[50],
-  backgroundColor: grey[800],
+  color: grey[900],
+  background: 'linear-gradient(268deg, #F0AFFF 0%, #F9E6FFFF 100%)', // Brighter gradient
   fontWeight: 600,
   borderRadius: '99px',
   '&:hover': {
-    backgroundColor: grey[900],
+    background: 'linear-gradient(268deg, #E08CFFFF 0%, #F2D4FFFF 100%)', // Brighter gradient
   },
   '&:active': {
     transform: 'translateY(3px)',
