@@ -17,7 +17,6 @@ export const CONTACT_ME_BUTTON_STYLE: SxProps<Theme> = {
   },
 };
 
-// Material UI DownloadCVButton Styles
 export const DOWNLOAD_CV_BUTTON_STYLE: SxProps<Theme> = () => {
   const theme = useTheme();
 
@@ -38,7 +37,6 @@ export const DOWNLOAD_CV_BUTTON_STYLE: SxProps<Theme> = () => {
   };
 };
 
-// Material UI GithubButton Styles
 export const GITHUB_BUTTON_STYLE: SxProps<Theme> = () => {
   const theme = useTheme();
 
@@ -51,7 +49,6 @@ export const GITHUB_BUTTON_STYLE: SxProps<Theme> = () => {
   };
 };
 
-// Material UI LinkedInButton Styles
 export const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
   color: '#126bc4',
 
@@ -61,7 +58,6 @@ export const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
   },
 };
 
-// Material UI SubmitButton Styles
 export const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
   color: grey[50],
   backgroundColor: grey[800],

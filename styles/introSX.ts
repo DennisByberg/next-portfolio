@@ -8,10 +8,6 @@ export const INTRO_STYLE: SxProps<Theme> = {
   display: 'flex',
   flexDirection: 'column',
   gap: '2.5rem',
-
-  '@media (min-width: 640px)': {
-    // marginBottom: 0,
-  },
 };
 
 export const INTRO_CIRCLE_STYLE: SxProps<Theme> = {

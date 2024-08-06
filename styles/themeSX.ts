@@ -1,7 +1,6 @@
 import { SxProps, Theme, useTheme } from '@mui/material';
 import { common, grey } from '@mui/material/colors';
 
-// Material UI ThemeProvider Styles
 export const THEME_PROVIDER_BUTTON_STYLE: SxProps<Theme> = () => {
   const theme = useTheme();
   return {

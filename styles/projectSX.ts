@@ -74,6 +74,5 @@ export const PROJECT_DESCRIPTION_STYLE: SxProps<Theme> = () => {
     color: theme.palette.mode === 'light' ? grey[600] : grey[400],
     fontStyle: 'italic',
     lineHeight: 1.625,
-    // marginTop: '0.5rem',
   };
 };
