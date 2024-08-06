@@ -22,7 +22,7 @@ function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <Typography paragraph={true} sx={{ textAlign: 'center' }}>
+      <Typography paragraph={true} sx={{ textAlign: 'center', mb: 0 }}>
         Please contact me directly at{' '}
         <Typography component={'a'} href={`mailto:${MY_EMAIL}`}>
           {MY_EMAIL}
@@ -53,7 +53,7 @@ function Contact() {
           inputProps={{ maxLength: 100 }}
         />
         <TextField
-          sx={{ mt: '1rem' }}
+          sx={{ mt: '1rem', mb: '1rem' }}
           name={'message'}
           id={'outlined-textarea'}
           label={'Your message'}

@@ -5,9 +5,12 @@ export const INTRO_STYLE: SxProps<Theme> = {
   maxWidth: '50rem',
   textAlign: 'center',
   scrollMarginTop: '100rem',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '2.5rem',
 
   '@media (min-width: 640px)': {
-    marginBottom: 0,
+    // marginBottom: 0,
   },
 };
 
@@ -35,8 +38,6 @@ export const INTRO_PHOTO_EMOJI_STYLE: SxProps<Theme> = {
 };
 
 export const INTRO_TEXT_STYLE: SxProps<Theme> = {
-  marginBottom: '2.5rem',
-  marginTop: '1rem',
   paddingInline: '1rem',
   fontSize: '1.5rem',
   fontWeight: 500,

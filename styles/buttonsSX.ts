@@ -63,7 +63,6 @@ export const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
 
 // Material UI SubmitButton Styles
 export const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
-  marginTop: '1rem',
   color: grey[50],
   backgroundColor: grey[800],
   fontWeight: 600,

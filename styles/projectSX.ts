@@ -13,7 +13,6 @@ export const PROJECT_SECTION_STYLE: SxProps<Theme> = () => {
     overflow: 'hidden',
     boxShadow: theme.palette.mode === 'dark' ? '1px 2px 3px white' : '1px 1px 1px black',
     position: 'relative',
-    marginBottom: '0.75rem',
     borderRadius: 5,
 
     '@media (min-width: 640px)': {
@@ -50,7 +49,6 @@ export const PROJECT_LIST_ITEM_STYLE: SxProps<Theme> = () => {
 };
 
 export const PROJECT_UL_STYLE: SxProps<Theme> = {
-  marginTop: '1rem',
   display: 'flex',
   flexWrap: 'wrap',
   gap: '0.5rem',
@@ -76,6 +74,6 @@ export const PROJECT_DESCRIPTION_STYLE: SxProps<Theme> = () => {
     color: theme.palette.mode === 'light' ? grey[600] : grey[400],
     fontStyle: 'italic',
     lineHeight: 1.625,
-    marginTop: '0.5rem',
+    // marginTop: '0.5rem',
   };
 };

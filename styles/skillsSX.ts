@@ -2,13 +2,13 @@ import { SxProps, Theme } from '@mui/material';
 import { common, grey } from '@mui/material/colors';
 
 export const SKILLS_SECTION_STYLE: SxProps<Theme> = {
-  marginBottom: '3rem',
+  // marginBottom: '3rem',
   maxWidth: '53rem',
   scrollMarginTop: '3rem',
   textAlign: 'center',
 
   '@media (min-width: 640px)': {
-    marginBottom: '10rem',
+    // marginBottom: '10rem',
   },
 };
 

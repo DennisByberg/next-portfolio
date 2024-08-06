@@ -26,7 +26,7 @@ function About() {
         time in their gym. Additionally, I play football once a week in a recreational
         league, spend time with my family and devote much of my free time to coding.
       </Typography>
-      <Typography paragraph={true} sx={{ mb: 4, lineHeight: 1.9 }}>
+      <Typography paragraph={true} sx={{ mb: 0, lineHeight: 1.9 }}>
         I have a background in backend development, having completed courses at Campus
         Mölndal for a year. However, I chose to fully commit to frontend development.
         Therefore, I decided to study at Jensen YH where I have now completed my education
