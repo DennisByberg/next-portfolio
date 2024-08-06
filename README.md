@@ -1,3 +1,1 @@
-## LIVE ON VERCEL:
-
-[CLICK HERE](https://dennisbyberg.vercel.app/) to view the live application hosted on Vercel.
+## LIVE ON VERCEL: [https://dennisbyberg.vercel.app](https://dennisbyberg.vercel.app/)
