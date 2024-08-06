@@ -4,6 +4,7 @@ import useSectionInView from '@/hooks/useSectionInView';
 import DennisPNG from '@/public/dennis2.png';
 import { LEFT_BG_BLUR_STYLE, RIGHT_BG_BLUR_STYLE } from '@/styles/backgroundBlurSX';
 import {
+  INTRO_BIGGER_BUTTONS_CONTAINER_STYLE,
   INTRO_BUTTONS_CONTAINER_STYLE,
   INTRO_CIRCLE_STYLE,
   INTRO_PHOTO_EMOJI_STYLE,
@@ -17,6 +18,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ContactMeButton from './Buttons/ContactMeButton';
 import DownloadCVButton from './Buttons/DownloadCVButton';
+import FacebookButton from './Buttons/FacebookButton';
 import GithubButton from './Buttons/GithubButton';
 import LinkedInButton from './Buttons/LinkedInButton';
 
@@ -71,13 +73,18 @@ function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <ContactMeButton
-          setActiveSection={setActiveSection}
-          setTimeOfLastClick={setTimeOfLastClick}
-        />
-        <DownloadCVButton />
-        <LinkedInButton />
-        <GithubButton />
+        <Box sx={INTRO_BIGGER_BUTTONS_CONTAINER_STYLE}>
+          <ContactMeButton
+            setActiveSection={setActiveSection}
+            setTimeOfLastClick={setTimeOfLastClick}
+          />
+          <DownloadCVButton />
+        </Box>
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <GithubButton />
+          <LinkedInButton />
+          <FacebookButton />
+        </Box>
       </Box>
     </Box>
   );

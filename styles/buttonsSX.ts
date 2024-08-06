@@ -50,7 +50,16 @@ export const GITHUB_BUTTON_STYLE: SxProps<Theme> = () => {
 };
 
 export const LINKED_IN_BUTTON_STYLE: SxProps<Theme> = {
-  color: '#126bc4',
+  color: 'rgb(12,101,194)', // Default linked in icon color
+
+  '&:active': {
+    transform: 'translateY(3px)',
+    transition: '100ms',
+  },
+};
+
+export const FACEBOOK_BUTTON_STYLE = {
+  color: 'rgb(8,102,255)',
 
   '&:active': {
     transform: 'translateY(3px)',

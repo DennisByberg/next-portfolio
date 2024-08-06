@@ -51,8 +51,13 @@ export const INTRO_BUTTONS_CONTAINER_STYLE: SxProps<Theme> = {
   justifyContent: 'center',
   gap: '0.5rem',
   paddingInline: '1rem',
+};
 
-  '@media (min-width: 640px)': {
-    flexDirection: 'row',
+export const INTRO_BIGGER_BUTTONS_CONTAINER_STYLE = {
+  display: 'flex',
+  gap: '1rem',
+
+  '@media (max-width: 640px)': {
+    flexDirection: 'column',
   },
 };
