@@ -3,6 +3,7 @@ import sendEmail from '@/actions/sendEmail';
 import useSectionInView from '@/hooks/useSectionInView';
 import { Box, TextField, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 import SubmitButton from './Buttons/SubmitButton';
 import SectionHeading from './SectionHeading';
@@ -10,6 +11,24 @@ import SectionHeading from './SectionHeading';
 function Contact() {
   const { ref } = useSectionInView('Contact');
   const MY_EMAIL = 'dennis.byberg@hotmail.com';
+
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [pending, setPending] = useState(false);
+
+  async function handleSubmit(formData: FormData) {
+    setPending(true);
+    const { data, error } = await sendEmail(formData);
+    setPending(false);
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    toast.success('Email sent successfully');
+    setEmail('');
+    setMessage('');
+  }
 
   return (
     <Box
@@ -31,14 +50,10 @@ function Contact() {
 
       <Box
         component={'form'}
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success('Email sent successfully');
+        onSubmit={async (event) => {
+          event.preventDefault();
+          const formData = new FormData(event.currentTarget);
+          await handleSubmit(formData);
         }}
       >
         <TextField
@@ -51,6 +66,8 @@ function Contact() {
           label={'Your email'}
           variant={'outlined'}
           inputProps={{ maxLength: 100 }}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
           sx={{ mt: '1rem', mb: '1rem' }}
@@ -62,9 +79,11 @@ function Contact() {
           fullWidth
           rows={8}
           inputProps={{ maxLength: 500 }}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
 
-        <SubmitButton />
+        <SubmitButton pending={pending} />
       </Box>
     </Box>
   );

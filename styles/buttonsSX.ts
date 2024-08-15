@@ -93,4 +93,7 @@ export const SUBMIT_BUTTON_STYLE: SxProps<Theme> = {
     padding: '1rem',
     borderRadius: '5px',
   },
+  '&.Mui-disabled': {
+    color: grey[600],
+  },
 };
