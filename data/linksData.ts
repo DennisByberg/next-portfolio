@@ -16,8 +16,8 @@ const LINKS_DATA = [
     hash: '#skills',
   },
   // {
-  //   name: "Experience",
-  //   hash: "#experience",
+  //   name: 'Experience',
+  //   hash: '#experience',
   // },
   {
     name: 'Contact',
