@@ -35,8 +35,8 @@ function Project({ title, description, tags, imageUrl, githubURL }: TProjectProp
       <Box
         component={'a'}
         href={githubURL}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={'_blank'}
+        rel={'noopener noreferrer'}
         style={{ textDecoration: 'none' }}
       >
         <Box component={'section'} sx={PROJECT_SECTION_STYLE}>

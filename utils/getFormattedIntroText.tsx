@@ -1,28 +1,33 @@
 import { Box } from '@mui/material';
+import { TypeAnimation } from 'react-type-animation';
+import getGreetings from './getGreetings';
 
 function getFormattedIntroText() {
-  const FIRST_NAME = 'Dennis Byberg';
-  const ROLE = 'Junior Frontend Developer';
-  const EXPERIENCE = '3 years';
-  const FOCUS = 'React & Next.js';
-
   return (
     <>
+      <Box
+        component={TypeAnimation}
+        sequence={getGreetings()}
+        speed={15}
+        repeat={Infinity}
+        sx={{
+          fontWeight: 750,
+          display: 'block',
+          width: '100%',
+          textAlign: 'center',
+          mb: 1,
+        }}
+        wrapper={'span'}
+      ></Box>{' '}
+      My name is Dennis Byberg. I&#39;m a{' '}
       <Box component={'span'} sx={{ fontWeight: 750 }}>
-        Hello, I&#39;m {FIRST_NAME}.
-      </Box>{' '}
-      I&#39;m a{' '}
-      <Box component={'span'} sx={{ fontWeight: 750 }}>
-        {ROLE}
+        Junior Frontend Developer
       </Box>{' '}
       with{' '}
       <Box component={'span'} sx={{ fontWeight: 750 }}>
-        {EXPERIENCE}
+        3 years
       </Box>{' '}
-      of experience. My focus is{' '}
-      <Box component={'span'} sx={{ textDecoration: 'underline' }}>
-        {FOCUS}
-      </Box>
+      of experience. My focus is <Box component={'span'}>React & Next.js</Box>
     </>
   );
 }
