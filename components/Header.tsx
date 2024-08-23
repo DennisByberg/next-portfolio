@@ -23,6 +23,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import ToTopButton from './Buttons/ToTopButton';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -125,6 +126,7 @@ export default function Header() {
           {drawer}
         </Drawer>
       </Box>
+      <ToTopButton />
     </Box>
   );
 }
