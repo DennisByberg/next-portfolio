@@ -1,25 +1,38 @@
-const SKILLS_DATA = [
-  'Agile Methodology',
-  'CSS/SASS',
-  'Cypress',
-  'Express',
-  'Firebase',
-  'Framer Motion',
-  'Git',
-  'Github',
+const SKILLS_FRONTEND_DATA = [
   'HTML',
+  'CSS',
+  'SASS',
   'JavaScript',
-  'Jest',
   'TypeScript',
-  'MongoDB',
-  'Next.js',
-  'Node',
   'React',
-  'React Testing Library',
+  'Next.js',
   'Redux',
-  'UI/UX',
-  'C#',
-  'SQL',
+  'UI/UX Design',
 ] as const;
 
-export default SKILLS_DATA;
+const SKILLS_BACKEND_DATA = [
+  'Node.js',
+  'Express',
+  'C#',
+  '.NET',
+  'ASP.NET',
+  'SQL',
+  'MongoDB',
+] as const;
+
+const SKILLS_TESTING_DATA = ['React Testing Library', 'Cypress', 'Jest'] as const;
+
+const SKILLS_VERSION_CONTROL_DATA = ['Git', 'Github'] as const;
+
+const SKILLS_METHODOLOGIES_DATA = ['Agile Methodology'] as const;
+
+const SKILLS_DESIGN_TOOLS_DATA = ['Figma'] as const;
+
+export {
+  SKILLS_BACKEND_DATA,
+  SKILLS_DESIGN_TOOLS_DATA,
+  SKILLS_FRONTEND_DATA,
+  SKILLS_METHODOLOGIES_DATA,
+  SKILLS_TESTING_DATA,
+  SKILLS_VERSION_CONTROL_DATA,
+};
