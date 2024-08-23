@@ -92,7 +92,7 @@ export default function Header() {
           >
             {name}
             <Box component={'span'} sx={{ ml: 1, fontSize: 14 }}>
-              {version}
+              v{version}
             </Box>
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
