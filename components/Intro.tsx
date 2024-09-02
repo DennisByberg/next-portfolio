@@ -17,6 +17,7 @@ import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ContactMeButton from './Buttons/ContactMeButton';
+import DownloadCoursesButton from './Buttons/DownloadCoursesButton';
 import DownloadCVButton from './Buttons/DownloadCVButton';
 import DownloadSkillsButton from './Buttons/DownloadSkillsButton';
 import FacebookButton from './Buttons/FacebookButton';
@@ -82,6 +83,7 @@ function Intro() {
           />
           <DownloadCVButton />
           <DownloadSkillsButton />
+          <DownloadCoursesButton />
         </Box>
         <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
           <GithubButton />
