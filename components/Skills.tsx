@@ -10,7 +10,6 @@ import {
 import useSectionInView from '@/hooks/useSectionInView';
 import { SKILLS_SECTION_STYLE } from '@/styles/skillsSX';
 import { Box } from '@mui/material';
-import DownloadSkillsButton from './Buttons/DownloadSkillsButton';
 import SectionHeading from './SectionHeading';
 import SkillSubjectSection from './SkillSubjectSection';
 
@@ -32,7 +31,6 @@ function Skills() {
         skillData={SKILLS_METHODOLOGIES_DATA}
       />
       <SkillSubjectSection title={'Design Tools'} skillData={SKILLS_DESIGN_TOOLS_DATA} />
-      <DownloadSkillsButton />
     </Box>
   );
 }
