@@ -5,5 +5,5 @@ export const ABOUT_SECTION_STYLE: SxProps<Theme> = {
   maxWidth: '50rem',
   paddingLeft: '1rem',
   paddingRight: '1rem',
-  scrollMarginTop: '7rem',
+  scrollMarginTop: '5rem',
 };
