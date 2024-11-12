@@ -28,6 +28,7 @@ import ToTopButton from './Buttons/ToTopButton';
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
+  const appName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +47,7 @@ export default function Header() {
       sx={{ textAlign: 'center' }}
     >
       <Typography variant={'h6'} sx={{ my: 2 }}>
-        {name}
+        {appName}
       </Typography>
       <Divider />
       <List>
@@ -91,7 +92,7 @@ export default function Header() {
             component={'div'}
             sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, ml: 2 }}
           >
-            {name}
+            {appName}
             <Box component={'span'} sx={{ ml: 1, fontSize: 14 }}>
               v{version}
             </Box>
