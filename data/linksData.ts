@@ -8,6 +8,10 @@ const LINKS_DATA = [
     hash: '#about',
   },
   {
+    name: 'Experience',
+    hash: '#experience',
+  },
+  {
     name: 'Projects',
     hash: '#projects',
   },
@@ -15,10 +19,6 @@ const LINKS_DATA = [
     name: 'Skills',
     hash: '#skills',
   },
-  // {
-  //   name: 'Experience',
-  //   hash: '#experience',
-  // },
   {
     name: 'Contact',
     hash: '#contact',
