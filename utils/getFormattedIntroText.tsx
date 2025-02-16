@@ -21,11 +21,11 @@ function getFormattedIntroText() {
       ></Box>{' '}
       My name is Dennis Byberg. I&#39;m a{' '}
       <Box component={'span'} sx={{ fontWeight: 750 }}>
-        Junior Frontend Developer
+        Junior Developer
       </Box>{' '}
       with{' '}
       <Box component={'span'} sx={{ fontWeight: 750 }}>
-        3 years
+        3,5 years
       </Box>{' '}
       of experience. My focus is <Box component={'span'}>React & Next.js</Box>
     </>

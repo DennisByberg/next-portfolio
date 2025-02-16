@@ -4,12 +4,21 @@ import { v4 as uuidv4 } from 'uuid';
 const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   {
     id: uuidv4(),
+    title: 'Cloud Dev',
+    organization: 'Campus Mölndal',
+    isActive: true,
+    isEducation: true,
+    startYear: 2024,
+    endYear: null,
+  },
+  {
+    id: uuidv4(),
     title: 'Bartender',
     organization: 'Hills Golf & Sports Club',
-    isActive: true,
+    isActive: false,
     isEducation: false,
     startYear: 2023,
-    endYear: null,
+    endYear: 2025,
   },
   {
     id: uuidv4(),

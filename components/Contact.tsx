@@ -10,7 +10,7 @@ import SectionHeading from './SectionHeading';
 
 function Contact() {
   const { ref } = useSectionInView('Contact');
-  const MY_EMAIL = 'dennis.byberg@hotmail.com';
+  const MY_EMAIL = 'dennis.byberg.dev@gmail.com';
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
