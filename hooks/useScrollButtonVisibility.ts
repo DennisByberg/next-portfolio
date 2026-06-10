@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function useScrollButtonVisibility() {
   const [isScrollButtonVisible, setIsScrollButtonVisible] = useState(false);
@@ -14,10 +14,10 @@ function useScrollButtonVisibility() {
 
     handleScroll();
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

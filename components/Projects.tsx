@@ -1,27 +1,27 @@
-'use client';
-import PROJECTS_DATA from '@/data/projectsData';
-import useSectionInView from '@/hooks/useSectionInView';
-import { Box } from '@mui/material';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Project from './Project';
-import SectionHeading from './SectionHeading';
+"use client";
+import PROJECTS_DATA from "@/data/projectsData";
+import useSectionInView from "@/hooks/useSectionInView";
+import { Box } from "@mui/material";
+import { motion } from "framer-motion";
+import React from "react";
+import Project from "./Project";
+import SectionHeading from "./SectionHeading";
 
 function Projects() {
-  const { ref } = useSectionInView('Projects', 0.5);
+  const { ref } = useSectionInView("Projects", 0.5);
 
   return (
     <Box
       component={motion.section}
-      sx={{ scrollMarginTop: '5rem' }}
+      sx={{ scrollMarginTop: "5rem" }}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-      id={'projects'}
+      id={"projects"}
       ref={ref}
     >
       <SectionHeading>My Projects</SectionHeading>
-      <Box component={'div'}>
+      <Box component={"div"}>
         {PROJECTS_DATA.map((project) => (
           <React.Fragment key={project.id}>
             <Project {...project} />

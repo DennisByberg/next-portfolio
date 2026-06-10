@@ -1,14 +1,14 @@
-import { DOWNLOAD_BUTTON_STYLE } from '@/styles/buttonsSX';
-import DownloadIcon from '@mui/icons-material/Download';
-import { Button } from '@mui/material';
+import { DOWNLOAD_BUTTON_STYLE } from "@/styles/buttonsSX";
+import DownloadIcon from "@mui/icons-material/Download";
+import { Button } from "@mui/material";
 
 function DownloadCVButton() {
   return (
     <Button
       sx={DOWNLOAD_BUTTON_STYLE}
-      variant={'contained'}
+      variant={"contained"}
       endIcon={<DownloadIcon />}
-      href={'/CV.pdf'}
+      href={"/CV.pdf"}
       download
     >
       Download CV

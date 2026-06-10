@@ -1,8 +1,8 @@
-import { CONTACT_ME_BUTTON_STYLE } from '@/styles/buttonsSX';
-import { TSectionName } from '@/types/globalTypes';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { Button } from '@mui/material';
-import { Dispatch, SetStateAction } from 'react';
+import { CONTACT_ME_BUTTON_STYLE } from "@/styles/buttonsSX";
+import { TSectionName } from "@/types/globalTypes";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { Button } from "@mui/material";
+import { Dispatch, SetStateAction } from "react";
 
 interface IContactMeButtonProps {
   setActiveSection: Dispatch<SetStateAction<TSectionName>>;
@@ -16,11 +16,11 @@ export default function ContactMeButton({
   return (
     <Button
       sx={CONTACT_ME_BUTTON_STYLE}
-      variant={'contained'}
+      variant={"contained"}
       endIcon={<KeyboardDoubleArrowRightIcon />}
-      href={'#contact'}
+      href={"#contact"}
       onClick={() => {
-        setActiveSection('Contact');
+        setActiveSection("Contact");
         setTimeOfLastClick(Date.now());
       }}
     >
