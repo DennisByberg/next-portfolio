@@ -6,8 +6,7 @@ export type TExperienceItem = {
   id: string;
   title: string;
   organization: string;
+  dateRange: string;
   isActive: boolean;
   isEducation: boolean;
-  startYear: number;
-  endYear: number | null;
 };

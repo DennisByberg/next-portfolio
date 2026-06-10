@@ -3,6 +3,7 @@ import { common, grey, purple } from "@mui/material/colors";
 
 export const SKILLS_SECTION_STYLE: SxProps<Theme> = {
   maxWidth: "53rem",
+  width: "100%",
   scrollMarginTop: "5rem",
   textAlign: "center",
 };

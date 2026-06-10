@@ -1,5 +1,6 @@
 "use client";
 import useSectionInView from "@/hooks/useSectionInView";
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import { Box } from "@mui/material";
 import React from "react";
 import CustomizedTimeline from "./CustomizedTimeline";
@@ -9,12 +10,12 @@ function Experience() {
   const { ref } = useSectionInView("Experience");
   return (
     <Box
-      sx={{ scrollMarginTop: "5rem" }}
+      sx={{ scrollMarginTop: "5rem", maxWidth: "50rem", width: "100%" }}
       component={"section"}
       id={"experience"}
       ref={ref}
     >
-      <SectionHeading>Experience</SectionHeading>
+      <SectionHeading icon={<WorkHistoryIcon />}>Experience</SectionHeading>
       <CustomizedTimeline />
     </Box>
   );

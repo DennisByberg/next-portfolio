@@ -1,8 +1,9 @@
-import { SxProps, Theme } from "@mui/material";
-import { common } from "@mui/material/colors";
+import { SxProps, Theme, useTheme } from "@mui/material";
+import { common, grey } from "@mui/material/colors";
 
 export const INTRO_STYLE: SxProps<Theme> = {
   maxWidth: "50rem",
+  width: "100%",
   textAlign: "center",
   scrollMarginTop: "100rem",
   display: "flex",
@@ -17,20 +18,20 @@ export const INTRO_CIRCLE_STYLE: SxProps<Theme> = {
   justifyContent: "center",
   position: "relative",
   width: "130px",
+  borderRadius: "50%",
 };
 
 export const INTRO_PHOTO_STYLE: SxProps<Theme> = {
   borderRadius: 99,
-  border: `4px solid ${common.white}`,
   objectFit: "cover",
-  boxShadow: `2px 2px 3px ${common.white}`,
+  objectPosition: "center top",
 };
 
 export const INTRO_PHOTO_EMOJI_STYLE: SxProps<Theme> = {
   fontSize: "3rem",
   position: "absolute",
-  bottom: "-0.5rem",
-  right: "-0.5rem",
+  bottom: "-1rem",
+  right: "-1rem",
 };
 
 export const INTRO_TEXT_STYLE: SxProps<Theme> = {

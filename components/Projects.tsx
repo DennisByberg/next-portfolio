@@ -1,6 +1,7 @@
 "use client";
 import PROJECTS_DATA from "@/data/projectsData";
 import useSectionInView from "@/hooks/useSectionInView";
+import FolderIcon from "@mui/icons-material/Folder";
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import React from "react";
@@ -20,7 +21,7 @@ function Projects() {
       id={"projects"}
       ref={ref}
     >
-      <SectionHeading>My Projects</SectionHeading>
+      <SectionHeading icon={<FolderIcon />}>My Projects</SectionHeading>
       <Box component={"div"}>
         {PROJECTS_DATA.map((project) => (
           <React.Fragment key={project.id}>
