@@ -1,5 +1,5 @@
 import { FOOTER_STYLE } from "@/styles/footerSX";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Footer() {
   return (
@@ -7,11 +7,6 @@ function Footer() {
       <Box component={"small"} sx={{ fontSize: "0.7rem" }}>
         &copy; 2024 Dennis Byberg. All rights reserved.
       </Box>
-      <Typography sx={{ fontSize: "0.7rem" }}>
-        <Box component={"span"}>About this website:</Box> built with React &
-        Next.js (App Router & Server Actions), Typescript, Material UI, Framer
-        Motion, React Email & Resend, Vercel Hosting
-      </Typography>
     </Box>
   );
 }

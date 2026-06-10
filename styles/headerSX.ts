@@ -29,8 +29,12 @@ export const HEADER_LINK_STYLE: SxProps<Theme> = () => {
   const theme = useTheme();
 
   return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.3rem",
     transition: "150ms",
-    m: 2,
+    m: 1,
+    fontSize: "0.85rem",
     color: theme.palette.mode === "light" ? grey[900] : grey[50],
 
     "&:hover": {
