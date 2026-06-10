@@ -1,6 +1,7 @@
 "use client";
 import sendEmail from "@/actions/sendEmail";
 import useSectionInView from "@/hooks/useSectionInView";
+import MailIcon from "@mui/icons-material/Mail";
 import { Box, TextField, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -35,13 +36,14 @@ function Contact() {
       component={motion.section}
       id={"contact"}
       ref={ref}
+      sx={{ maxWidth: "50rem", width: "100%" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <SectionHeading>Contact Me</SectionHeading>
-      <Typography sx={{ textAlign: "center", mb: 0 }}>
+      <SectionHeading icon={<MailIcon />}>Contact Me</SectionHeading>
+      <Typography sx={{ textAlign: "left", mb: 0 }}>
         Please contact me directly at{" "}
         <Typography component={"a"} href={`mailto:${MY_EMAIL}`}>
           {MY_EMAIL}

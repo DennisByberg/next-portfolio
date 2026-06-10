@@ -9,6 +9,7 @@ import {
 } from "@/data/skillsData";
 import useSectionInView from "@/hooks/useSectionInView";
 import { SKILLS_SECTION_STYLE } from "@/styles/skillsSX";
+import BuildIcon from "@mui/icons-material/Build";
 import { Box } from "@mui/material";
 import SectionHeading from "./SectionHeading";
 import SkillSubjectSection from "./SkillSubjectSection";
@@ -23,7 +24,7 @@ function Skills() {
       id={"skills"}
       ref={ref}
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading icon={<BuildIcon />}>My skills</SectionHeading>
       <SkillSubjectSection
         title={"Frontend"}
         skillData={SKILLS_FRONTEND_DATA}

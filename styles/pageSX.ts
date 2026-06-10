@@ -5,4 +5,5 @@ export const HOME_MAIN_STYLE: SxProps<Theme> = {
   flexDirection: "column",
   alignItems: "center",
   paddingInline: "1rem",
+  gap: "6rem",
 };

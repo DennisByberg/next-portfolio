@@ -1,9 +1,8 @@
 import { SxProps, Theme } from "@mui/material";
 
 export const ABOUT_SECTION_STYLE: SxProps<Theme> = {
-  textAlign: "center",
+  textAlign: "left",
   maxWidth: "50rem",
-  paddingLeft: "1rem",
-  paddingRight: "1rem",
+  width: "100%",
   scrollMarginTop: "5rem",
 };

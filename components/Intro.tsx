@@ -1,7 +1,7 @@
 "use client";
 import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
 import useSectionInView from "@/hooks/useSectionInView";
-import DennisPNG from "@/public/dennis2.png";
+import DennisPNG from "@/public/dennis-byberg-portrait-transparent.png";
 import {
   LEFT_BG_BLUR_STYLE,
   RIGHT_BG_BLUR_STYLE,
@@ -25,7 +25,6 @@ import DownloadCVButton from "./Buttons/DownloadCVButton";
 import DownloadSkillsButton from "./Buttons/DownloadSkillsButton";
 import FacebookButton from "./Buttons/FacebookButton";
 import GithubButton from "./Buttons/GithubButton";
-import InstagramButton from "./Buttons/InstagramButton";
 import LinkedInButton from "./Buttons/LinkedInButton";
 
 function Intro() {
@@ -97,7 +96,6 @@ function Intro() {
           <GithubButton />
           <LinkedInButton />
           <FacebookButton />
-          <InstagramButton />
         </Box>
       </Box>
     </Box>
