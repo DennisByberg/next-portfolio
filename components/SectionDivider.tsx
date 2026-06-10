@@ -1,7 +1,7 @@
-'use client';
-import { SECTION_DIVIDER_STYLE } from '@/styles/sectionDividerSX';
-import { Box } from '@mui/material';
-import { motion } from 'framer-motion';
+"use client";
+import { SECTION_DIVIDER_STYLE } from "@/styles/sectionDividerSX";
+import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 
 function SectionDivider() {
   return (

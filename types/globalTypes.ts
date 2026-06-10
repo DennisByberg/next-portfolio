@@ -1,6 +1,6 @@
-import LINKS_DATA from '../data/linksData';
+import LINKS_DATA from "../data/linksData";
 
-export type TSectionName = (typeof LINKS_DATA)[number]['name'];
+export type TSectionName = (typeof LINKS_DATA)[number]["name"];
 
 export type TExperienceItem = {
   id: string;

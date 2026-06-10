@@ -1,11 +1,11 @@
-import { TExperienceItem } from '@/types/globalTypes';
-import { v4 as uuidv4 } from 'uuid';
+import { TExperienceItem } from "@/types/globalTypes";
+import { v4 as uuidv4 } from "uuid";
 
 const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   {
     id: uuidv4(),
-    title: 'Cloud Dev',
-    organization: 'Campus Mölndal',
+    title: "Cloud Dev",
+    organization: "Campus Mölndal",
     isActive: true,
     isEducation: true,
     startYear: 2024,
@@ -13,8 +13,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Bartender',
-    organization: 'Hills Golf & Sports Club',
+    title: "Bartender",
+    organization: "Hills Golf & Sports Club",
     isActive: false,
     isEducation: false,
     startYear: 2023,
@@ -22,8 +22,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'System Developer',
-    organization: 'LIA at Volvo Cars',
+    title: "System Developer",
+    organization: "LIA at Volvo Cars",
     isActive: false,
     isEducation: false,
     startYear: 2023,
@@ -31,8 +31,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Frontend Dev',
-    organization: 'Jensen Yrkeshögskola',
+    title: "Frontend Dev",
+    organization: "Jensen Yrkeshögskola",
     isActive: false,
     isEducation: true,
     startYear: 2022,
@@ -40,8 +40,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Bartender',
-    organization: 'Star Bowling',
+    title: "Bartender",
+    organization: "Star Bowling",
     isActive: false,
     isEducation: false,
     startYear: 2022,
@@ -49,8 +49,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: '.NET Dev',
-    organization: 'Campus Mölndal',
+    title: ".NET Dev",
+    organization: "Campus Mölndal",
     isActive: false,
     isEducation: true,
     startYear: 2021,
@@ -58,8 +58,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Delivery Driver',
-    organization: 'UPS Sverige',
+    title: "Delivery Driver",
+    organization: "UPS Sverige",
     isActive: false,
     isEducation: false,
     startYear: 2019,
@@ -67,8 +67,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Bartender',
-    organization: 'Hard Rock Café',
+    title: "Bartender",
+    organization: "Hard Rock Café",
     isActive: false,
     isEducation: false,
     startYear: 2017,
@@ -76,8 +76,8 @@ const EXPERIENCE_DATA: readonly TExperienceItem[] = [
   },
   {
     id: uuidv4(),
-    title: 'Restaurant Manager',
-    organization: 'Bistro Hemma Hos',
+    title: "Restaurant Manager",
+    organization: "Bistro Hemma Hos",
     isActive: false,
     isEducation: false,
     startYear: 2015,
